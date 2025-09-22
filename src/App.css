@@ -1,0 +1,135 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container, html, body {
+  background: #ffffff;
+  color: #2b2b2b;
+}
+
+.dn-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Topbar and Navbar */
+.dn-topbar {
+  background: #7a1f1f;
+  color: #fff;
+  font-size: 14px;
+}
+.dn-topbar .dn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px;
+}
+.dn-small-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 2px 8px;
+  margin-left: 8px;
+  border-radius: 4px;
+}
+
+.dn-navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.dn-navbar .dn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: relative;
+}
+.dn-brand {
+  font-weight: 700;
+  color: #7a1f1f;
+  font-size: 20px;
+}
+.dn-nav a {
+  margin: 0 12px;
+  color: #333;
+}
+.dn-burger {
+  display: none;
+  background: transparent;
+  border: none;
+}
+.dn-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #333;
+  margin: 4px 0;
+}
+@media (max-width: 768px) {
+  .dn-nav { display: none; }
+  .dn-nav.open { display: block; position: absolute; top: 64px; left: 0; right: 0; background: #fff; padding: 12px 16px; border-top: 1px solid #eee; z-index: 1000; }
+  .dn-nav.open a { display: block; padding: 8px 0; }
+  .dn-burger { display: block; }
+}
+
+/* Hero */
+.dn-hero {
+  position: relative;
+}
+.dn-hero-slide {
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.dn-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.25));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.dn-hero-title { font-size: 36px; margin: 0; }
+.dn-hero-subtitle { font-size: 18px; margin-top: 8px; opacity: 0.9; }
+.dn-hero-dots { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; }
+.dn-dot { width: 10px; height: 10px; border-radius: 999px; border: none; background: rgba(255,255,255,0.6); }
+.dn-dot.active { background: #fff; }
+
+/* Notices */
+.dn-notices { background: #fff7f7; border-top: 1px solid #f0dada; border-bottom: 1px solid #f0dada; }
+.dn-notices-row { display: flex; align-items: center; gap: 12px; overflow: hidden; }
+.dn-notices-title { background: #7a1f1f; color: #fff; padding: 8px 12px; border-radius: 4px; font-weight: 600; }
+.dn-notices-track { position: relative; overflow: hidden; flex: 1; }
+.dn-notices-items { display: inline-flex; gap: 24px; padding: 8px 0; animation: dn-marquee 20s linear infinite; }
+.dn-notice { white-space: nowrap; color: #7a1f1f; }
+@keyframes dn-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* Sections */
+.dn-main { background: #fafafa; }
+.dn-section { padding: 40px 0; }
+.dn-section-alt { background: #fff; }
+.dn-section h2 { color: #7a1f1f; margin: 0 0 12px 0; }
+.dn-section p { color: #333; }
+.dn-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.dn-card { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 16px; color: inherit; }
+.dn-card h3 { margin: 0 0 8px 0; color: #7a1f1f; }
+.dn-card p { margin: 0 0 12px 0; color: #555; }
+.dn-link { color: #7a1f1f; font-weight: 600; }
+@media (max-width: 992px) { .dn-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .dn-grid { grid-template-columns: 1fr; } }
+
+.dn-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.dn-gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+@media (max-width: 768px) { .dn-gallery { grid-template-columns: repeat(2, 1fr); } }
+
+/* Footer */
+.dn-footer { background: #2b2b2b; color: #ddd; }
+.dn-footer a { color: #ddd; }
+.dn-footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px 0; }
+.dn-footer-bottom { background: #1f1f1f; color: #aaa; padding: 12px 0; }

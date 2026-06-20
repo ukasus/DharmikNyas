@@ -43,8 +43,7 @@ function Navbar() {
             <a href="#home">{t('nav.home')}</a>
             <a href="#about">{t('nav.about')}</a>
             <a href="#notices">{t('nav.notices')}</a>
-            <a href="#gallery">{t('nav.gallery')}</a>
-            <a href="#contact">{t('nav.contact')}</a>
+<a href="#contact">{t('nav.contact')}</a>
           </nav>
           <button className="dn-burger" aria-label="Toggle menu" onClick={() => setIsOpen(v => !v)}>
             <span></span><span></span><span></span>

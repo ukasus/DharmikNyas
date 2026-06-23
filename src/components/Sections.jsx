@@ -29,7 +29,7 @@ function Sections() {
             administer temples, religious trusts and related welfare activities across the town.
           </p>
           <p>
-            <a href="https://drive.google.com/file/d/1Y2Yl1vkuetlon9RU7vT86OrmcZgii4Pk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1IdmFHq3OtBv9sIvBMl9Tu-yAbJ_SVoI1/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               {t('about.deedLink')}
             </a>
           </p>
